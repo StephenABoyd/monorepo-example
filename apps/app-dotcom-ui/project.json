@@ -3,7 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/dotcom/src",
+  "sourceRoot": "apps/app-dotcom-ui/src",
   "tags": [],
   "targets": {
     "generate": {
@@ -103,7 +103,7 @@
   "implicitDependencies": [
     "api-product",
     "api-account",
-    "products",
-    "account"
+    "ws-dotcom-products",
+    "ws-dotcom-account"
   ]
 }

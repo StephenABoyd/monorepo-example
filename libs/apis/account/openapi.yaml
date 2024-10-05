@@ -70,9 +70,6 @@ components:
           type: string
           format: email
           description: Email address associated with the account.
-        address:
-          type: string
-          description: Physical address of the account holder.
         phone:
           type: string
           description: Phone number associated with the account.

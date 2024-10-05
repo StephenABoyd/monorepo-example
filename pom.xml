@@ -75,7 +75,7 @@
   </properties>
 
   <modules>
-    <module>apps/products</module>
-    <module>apps/account</module>
+    <module>apps/ws-dotcom-products</module>
+    <module>apps/ws-dotcom-account</module>
   </modules>
 </project>
