@@ -1,20 +1,11 @@
 {
-  "name": "dotcom",
+  "name": "app-dotcom-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/app-dotcom-ui/src",
   "tags": [],
   "targets": {
-    "generate": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          "openapi-typescript ./libs/apis/product/openapi.yaml -o ./dist/gen/types/product.d.ts",
-          "openapi-typescript ./libs/apis/account/openapi.yaml -o ./dist/gen/types/account.d.ts"
-        ]
-      }
-    },
     "build": {
       "dependsOn": ["generate", "^build"],
       "executor": "@angular-devkit/build-angular:application",
@@ -99,11 +90,5 @@
         "spa": true
       }
     }
-  },
-  "implicitDependencies": [
-    "api-product",
-    "api-account",
-    "ws-dotcom-products",
-    "ws-dotcom-account"
-  ]
+  }
 }

@@ -28,6 +28,31 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-hateoas</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-devtools</artifactId>
+      <scope>runtime</scope>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>com.boyd.dotcom</groupId>
+      <artifactId>product-service</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -43,20 +68,20 @@
         <version>7.8.0</version>
         <!-- /RELEASE_VERSION -->
         <executions>
-            <execution>
-                <goals>
-                    <goal>generate</goal>
-                </goals>
-                <configuration>
-                    <apiPackage>com.boyd.dotcom.product.api</apiPackage>
-                    <modelPackage>com.boyd.dotcom.product.model</modelPackage>
-                    <inputSpec>libs/apis/product/openapi.yaml</inputSpec>
-                    <generatorName>java</generatorName>
-                    <configOptions>
-                      <useJakartaEe>true</useJakartaEe>
-                    </configOptions>
-                </configuration>
-            </execution>
+          <execution>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <apiPackage>com.boyd.dotcom.product.api</apiPackage>
+              <modelPackage>com.boyd.dotcom.product.model</modelPackage>
+              <inputSpec>libs/apis/product/openapi.yaml</inputSpec>
+              <generatorName>java</generatorName>
+              <configOptions>
+                <useJakartaEe>true</useJakartaEe>
+              </configOptions>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
     </plugins>
