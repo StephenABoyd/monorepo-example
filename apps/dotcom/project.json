@@ -100,5 +100,10 @@
       }
     }
   },
-  "implicitDependencies": ["api-product", "products", "account"]
+  "implicitDependencies": [
+    "api-product",
+    "api-account",
+    "products",
+    "account"
+  ]
 }
