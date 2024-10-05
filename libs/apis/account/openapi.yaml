@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Account Management API
+  version: v1.0.0
+  description: API for reviewing and managing account details.
+
+paths:
+  /accounts/{accountId}:
+    get:
+      summary: Get account details by ID
+      description: Retrieves the details of an account by its unique identifier.
+      parameters:
+        - in: path
+          name: accountId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the account.
+      responses:
+        '200':
+          description: Account details retrieved successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+        '404':
+          description: Account not found.
+    put:
+      summary: Update account details
+      description: Updates the details of an existing account.
+      parameters:
+        - in: path
+          name: accountId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the account.
+      requestBody:
+        description: Updated account details.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Account'
+      responses:
+        '200':
+          description: Account details updated successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+        '400':
+          description: Invalid account data provided.
+        '404':
+          description: Account not found.
+
+components:
+  schemas:
+    Account:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+          description: Unique identifier of the account.
+        name:
+          type: string
+          description: Name of the account holder.
+        email:
+          type: string
+          format: email
+          description: Email address associated with the account.
+        address:
+          type: string
+          description: Physical address of the account holder.
+        phone:
+          type: string
+          description: Phone number associated with the account.

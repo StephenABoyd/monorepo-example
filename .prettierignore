@@ -1,0 +1,4 @@
+# Maven target
+target/
+.m2/repository
+.angular
