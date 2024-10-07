@@ -1,0 +1,24 @@
+{
+  "name": "lib-account-contract",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "targets": {
+    "buildtypescript": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "openapi-typescript {projectRoot}/openapi.yaml -o ./dist/types/account.ts"
+      }
+    },
+    "buildjava": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "echo hello"
+      }
+    },
+    "build": {
+      "executor": "nx:noop",
+      "dependsOn": ["buildtypescript", "buildjava"]
+    }
+  },
+  "tags": []
+}

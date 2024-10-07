@@ -50,8 +50,5 @@
   </properties>
 
   <modules>
-    <module>apps/ws-dotcom-products</module>
-    <module>apps/ws-dotcom-account</module>
-    <module>libs/backend/services/product</module>
   </modules>
 </project>
