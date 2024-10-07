@@ -10,9 +10,9 @@
       }
     },
     "buildjava": {
-      "executor": "nx:run-commands",
+      "executor": "@jnxplus/nx-maven:run-task",
       "options": {
-        "command": "echo hello"
+        "task": "package -DskipTests=true"
       }
     },
     "build": {

@@ -50,5 +50,8 @@
   </properties>
 
   <modules>
+    <module>apps/ws-product-api</module>
+    <module>libs/contracts/lib-account-contract</module>
+    <module>libs/contracts/lib-product-contract</module>
   </modules>
 </project>
